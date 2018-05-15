@@ -13,11 +13,9 @@ class PostsController extends Controller
     {
         $this->middleware('auth')->except(['index', 'show']);
     }
+    
     public function index(Posts $posts)
     {
-
-//        dd($posts);
-
         $posts = $posts->all();
 
 //        $posts = Post::latest()
